@@ -16,6 +16,7 @@
         chezmoi
         alacritty    
         neovim
+        zellij
         openconnect
         (python311.withPackages(ps: with ps; [
             numpy
