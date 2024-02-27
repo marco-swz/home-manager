@@ -28,7 +28,7 @@
         cargo
         go
         nodejs_20
-        obsidian
+        obsidian-wayland
         clang-tools
         glibc
         thunderbird
