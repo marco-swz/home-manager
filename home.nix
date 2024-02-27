@@ -17,6 +17,7 @@
         alacritty    
         neovim
         zellij
+        tmux
         openconnect
         (python311.withPackages(ps: with ps; [
             numpy
