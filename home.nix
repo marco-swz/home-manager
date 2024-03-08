@@ -9,6 +9,39 @@
         EDITOR = "nvim";
     };
 
+    xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+            "x-scheme-handler/mailto" = ["userapp-Thunderbird-U9XWH2.desktop"];
+            "message/rfc822" = ["userapp-Thunderbird-U9XWH2.desktop"];
+            "x-scheme-handler/mid" = ["userapp-Thunderbird-U9XWH2.desktop"];
+            "text/csv" = ["nvim.desktop"];
+            "text/css" = ["nvim.desktop"];
+            "text/javascript" = ["nvim.desktop"];
+            "application/json" = ["nvim.desktop"];
+            "text/plain" = ["nvim.desktop"];
+            "text/xml" = ["nvim.desktop"];
+            "text/application" = ["nvim.desktop"];
+            "text/markdown" = ["nvim.desktop"];
+            "application/pdf" = ["firefox.desktop"];
+            "text/html" = ["firefox.desktop"];
+        };
+        associations.added = {
+            "x-scheme-handler/mailto" = ["userapp-Thunderbird-U9XWH2.desktop"];
+            "x-scheme-handler/mid" = ["userapp-Thunderbird-U9XWH2.desktop"];
+            "text/csv" = ["nvim.desktop"];
+            "text/css" = ["nvim.desktop"];
+            "text/javascript" = ["nvim.desktop"];
+            "application/json" = ["nvim.desktop"];
+            "text/plain" = ["nvim.desktop"];
+            "text/xml" = ["nvim.desktop"];
+            "text/application" = ["nvim.desktop"];
+            "text/markdown" = ["nvim.desktop"];
+            "application/pdf" = ["firefox.desktop"];
+            "text/html" = ["firefox.desktop"];
+        };
+    };
+
     home.packages = with pkgs; [
         nnn
         zathura
