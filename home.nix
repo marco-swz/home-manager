@@ -49,6 +49,8 @@
         chezmoi
         alacritty    
         neovim
+        fd
+        ripgrep
         zellij
         tmux
         openconnect
