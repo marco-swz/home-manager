@@ -67,5 +67,6 @@
         clang-tools
         glibc
         thunderbird
+        ltex-ls
     ];
 }
