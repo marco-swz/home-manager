@@ -68,5 +68,6 @@
         glibc
         thunderbird
         ltex-ls
+        remmina
     ];
 }
