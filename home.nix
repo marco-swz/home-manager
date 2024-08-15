@@ -9,6 +9,15 @@
         EDITOR = "nvim";
     };
 
+    home.shellAliases = {
+        cfg-network = "nm-connection-editor";
+        cfg-bluetooth = "overskride";
+        img = "gthumb";
+        vid = "vlc";
+        remote = "remmina";
+        usb = "udiskie";
+    };
+
     xdg.mimeApps = {
         enable = true;
         defaultApplications = {
@@ -69,5 +78,9 @@
         thunderbird
         ltex-ls
         remmina
+        overskride
+        udiskie
+        gthumb
+        vlc
     ];
 }
