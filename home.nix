@@ -82,5 +82,7 @@
         udiskie
         gthumb
         vlc
+        lazygit
+        wezterm
     ];
 }
