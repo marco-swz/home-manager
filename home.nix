@@ -7,6 +7,7 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        XCURSOR_THEME = "Vimix-cursors";
     };
 
     home.shellAliases = {
@@ -16,6 +17,14 @@
         vid = "vlc";
         remote = "remmina";
         usb = "udiskie";
+    };
+
+    programs.bash = {
+        enable = true;
+
+        initExtra = ''
+            [[ -f ~/.profile ]] && . ~/.profile
+        '';
     };
 
     xdg.mimeApps = {
@@ -49,6 +58,34 @@
             "application/pdf" = ["firefox.desktop"];
             "text/html" = ["firefox.desktop"];
         };
+    };
+
+    home.pointerCursor = {
+        gtk.enable = true;
+        x11.enable = true;
+        name = "vimix";
+        package = pkgs.vimix-cursors;
+        size = 24;
+      };
+
+    gtk = {
+        enable = true;
+
+        cursorTheme.package = pkgs.vimix-cursors;
+        cursorTheme.name = "vimix";
+
+        theme.package = pkgs.orchis-theme;
+        theme.name = "orchis";
+    };
+
+    home.file = {
+        ".icons/Vimix-cursors".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
+    };
+
+    qt = {
+        enable = true;
+        platformTheme.name = "gtk";
+        style.name = "adwaita-dark";
     };
 
     home.packages = with pkgs; [
