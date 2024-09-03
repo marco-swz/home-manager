@@ -63,7 +63,7 @@
     home.pointerCursor = {
         gtk.enable = true;
         x11.enable = true;
-        name = "vimix";
+        name = "Vimix-cursors";
         package = pkgs.vimix-cursors;
         size = 24;
       };
@@ -72,7 +72,7 @@
         enable = true;
 
         cursorTheme.package = pkgs.vimix-cursors;
-        cursorTheme.name = "vimix";
+        cursorTheme.name = "vimix-cursors";
 
         theme.package = pkgs.orchis-theme;
         theme.name = "orchis";
