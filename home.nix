@@ -121,5 +121,7 @@
         vlc
         lazygit
         wezterm
+        pyright
+        rust-analyzer
     ];
 }
