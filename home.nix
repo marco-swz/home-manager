@@ -123,5 +123,6 @@
         wezterm
         pyright
         rust-analyzer
+        terminus-nerdfont
     ];
 }
