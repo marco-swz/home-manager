@@ -74,8 +74,8 @@
         cursorTheme.package = pkgs.vimix-cursors;
         cursorTheme.name = "vimix-cursors";
 
-        theme.package = pkgs.orchis-theme;
-        theme.name = "orchis";
+        theme.package = pkgs.kanagawa-gtk-theme;
+        theme.name = "Kanagawa";
     };
 
     home.file = {
@@ -97,10 +97,9 @@
         neovim
         fd
         ripgrep
-        zellij
         tmux
         openconnect
-        (python311.withPackages(ps: with ps; [
+        (python312.withPackages(ps: with ps; [
             numpy
             matplotlib
             polars
@@ -110,9 +109,10 @@
         go
         nodejs_20
         obsidian-wayland
+        nixd
         clang-tools
+        clang
         glibc
-        thunderbird
         ltex-ls
         remmina
         overskride
@@ -120,7 +120,6 @@
         gthumb
         vlc
         lazygit
-        wezterm
         pyright
         rust-analyzer
         vistafonts
