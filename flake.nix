@@ -15,14 +15,14 @@
         pkgs = import nixpkgs { 
             system = "x86_64-linux"; 
             config.allowUnfree = true; 
-            config.permittedInsecurePackages = [
-                "electron-24.8.6"
-            ];
-            overlays = [
-                (final: prev: {
-                    obsidian-wayland = prev.obsidian.override {electron = final.electron_24;};
-                })
-            ];
+            # config.permittedInsecurePackages = [
+                # "electron-24.8.6"
+            # ];
+            # overlays = [
+                # (final: prev: {
+                    # obsidian-wayland = prev.obsidian.override {electron = final.electron_24;};
+                # })
+            # ];
         };
     in {
         homeConfigurations."marco" = home-manager.lib.homeManagerConfiguration {

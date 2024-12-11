@@ -104,11 +104,12 @@
             matplotlib
             polars
         ]))
-        python311Packages.pip
+        python312Packages.pip
         cargo
         go
         nodejs_20
-        obsidian-wayland
+        # obsidian-wayland
+        obsidian
         nixd
         clang-tools
         clang
