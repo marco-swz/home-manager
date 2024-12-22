@@ -8,6 +8,7 @@
     home.sessionVariables = {
         EDITOR = "nvim";
         XCURSOR_THEME = "Vimix-cursors";
+        ZDOTDIR = "~/.config/zsh";
     };
 
     home.shellAliases = {
@@ -17,14 +18,6 @@
         vid = "vlc";
         remote = "remmina";
         usb = "udiskie";
-    };
-
-    programs.bash = {
-        enable = true;
-
-        initExtra = ''
-            [[ -f ~/.profile ]] && . ~/.profile
-        '';
     };
 
     xdg.mimeApps = {
@@ -96,6 +89,7 @@
         alacritty    
         neovim
         fd
+        zsh
         ripgrep
         tmux
         openconnect
@@ -124,5 +118,6 @@
         pyright
         rust-analyzer
         vistafonts
+        zellij
     ];
 }
