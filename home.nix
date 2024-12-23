@@ -78,7 +78,6 @@
     qt = {
         enable = true;
         platformTheme.name = "gtk";
-        style.name = "adwaita-dark";
     };
 
     home.packages = with pkgs; [
@@ -119,5 +118,6 @@
         rust-analyzer
         vistafonts
         zellij
+        spotify
     ];
 }
