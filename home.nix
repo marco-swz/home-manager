@@ -119,5 +119,6 @@
         vistafonts
         zellij
         spotify
+        helix
     ];
 }
