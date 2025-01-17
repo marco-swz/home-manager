@@ -6,7 +6,7 @@
     programs.home-manager.enable = true;
 
     home.sessionVariables = {
-        EDITOR = "nvim";
+        EDITOR = "hx";
         XCURSOR_THEME = "Vimix-cursors";
         ZDOTDIR = "~/.config/zsh";
     };
