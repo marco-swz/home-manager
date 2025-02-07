@@ -101,7 +101,6 @@
         cargo
         go
         nodejs_20
-        # obsidian-wayland
         obsidian
         nixd
         clang-tools
@@ -120,5 +119,8 @@
         zellij
         spotify
         helix
+        nextcloud-client
+        wezterm
+        devenv
     ];
 }
