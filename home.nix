@@ -1,23 +1,85 @@
 { config, pkgs, ... }:
 {
-    home.username = "marco";
-    home.homeDirectory = "/home/marco";
-    home.stateVersion = "23.11";
-    programs.home-manager.enable = true;
-
-    home.sessionVariables = {
-        EDITOR = "hx";
-        XCURSOR_THEME = "Vimix-cursors";
-        ZDOTDIR = "~/.config/zsh";
+    programs = {
+        home-manager.enable = true;
+        bash = {
+            enable = true;
+            initExtra = ''
+              . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+            '';
+        };
     };
 
-    home.shellAliases = {
-        cfg-network = "nm-connection-editor";
-        cfg-bluetooth = "overskride";
-        img = "gthumb";
-        vid = "vlc";
-        remote = "remmina";
-        usb = "udiskie";
+    home = {
+        username = "marco";
+        homeDirectory = "/home/marco";
+        stateVersion = "23.11";
+        file = {
+            ".icons/Vimix-cursors".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
+        };
+        sessionVariables = {
+            EDITOR = "hx";
+            XCURSOR_THEME = "Vimix-cursors";
+        };
+        shellAliases = {
+            cfg-network = "nm-connection-editor";
+            cfg-bluetooth = "overskride";
+            img = "gthumb";
+            vid = "vlc";
+            remote = "remmina";
+            usb = "udiskie";
+        };  
+        pointerCursor = {
+            gtk.enable = true;
+            x11.enable = true;
+            name = "Vimix-cursors";
+            package = pkgs.vimix-cursors;
+            size = 24;
+        };
+        packages = with pkgs; [
+            nnn
+            zathura
+            age
+            chezmoi
+            alacritty    
+            neovim
+            fd
+            zsh
+            ripgrep
+            tmux
+            openconnect
+            (python312.withPackages(ps: with ps; [
+                numpy
+                matplotlib
+                polars
+            ]))
+            python312Packages.pip
+            cargo
+            go
+            nodejs_20
+            obsidian
+            nixd
+            clang-tools
+            clang
+            glibc
+            ltex-ls
+            remmina
+            overskride
+            udiskie
+            gthumb
+            vlc
+            lazygit
+            pyright
+            rust-analyzer
+            vistafonts
+            zellij
+            spotify
+            helix
+            nextcloud-client
+            wezterm
+            devenv
+            keepassxc
+        ];
     };
 
     xdg.mimeApps = {
@@ -53,14 +115,6 @@
         };
     };
 
-    home.pointerCursor = {
-        gtk.enable = true;
-        x11.enable = true;
-        name = "Vimix-cursors";
-        package = pkgs.vimix-cursors;
-        size = 24;
-      };
-
     gtk = {
         enable = true;
 
@@ -71,57 +125,8 @@
         theme.name = "Kanagawa";
     };
 
-    home.file = {
-        ".icons/Vimix-cursors".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
-    };
-
     qt = {
         enable = true;
         platformTheme.name = "gtk";
     };
-
-    home.packages = with pkgs; [
-        nnn
-        zathura
-        age
-        chezmoi
-        alacritty    
-        neovim
-        fd
-        zsh
-        ripgrep
-        tmux
-        openconnect
-        (python312.withPackages(ps: with ps; [
-            numpy
-            matplotlib
-            polars
-        ]))
-        python312Packages.pip
-        cargo
-        go
-        nodejs_20
-        obsidian
-        nixd
-        clang-tools
-        clang
-        glibc
-        ltex-ls
-        remmina
-        overskride
-        udiskie
-        gthumb
-        vlc
-        lazygit
-        pyright
-        rust-analyzer
-        vistafonts
-        zellij
-        spotify
-        helix
-        nextcloud-client
-        wezterm
-        devenv
-        keepassxc
-    ];
 }
