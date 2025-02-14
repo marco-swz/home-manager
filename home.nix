@@ -122,5 +122,6 @@
         nextcloud-client
         wezterm
         devenv
+        keepassxc
     ];
 }
