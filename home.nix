@@ -6,6 +6,7 @@
             enable = true;
             initExtra = ''
               . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+                export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
             '';
         };
     };
@@ -40,11 +41,9 @@
             nnn
             zathura
             age
-            chezmoi
             alacritty    
             neovim
             fd
-            zsh
             ripgrep
             tmux
             openconnect
@@ -63,7 +62,6 @@
             clang
             glibc
             ltex-ls
-            remmina
             overskride
             udiskie
             gthumb
@@ -78,7 +76,7 @@
             nextcloud-client
             wezterm
             devenv
-            keepassxc
+            wezterm
         ];
     };
 
