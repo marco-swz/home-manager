@@ -45,6 +45,7 @@
             neovim
             fd
             ripgrep
+            fzf
             tmux
             openconnect
             (python312.withPackages(ps: with ps; [
