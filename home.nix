@@ -19,7 +19,7 @@
             ".icons/Vimix-cursors".source = "${pkgs.vimix-cursors}/share/icons/Vimix-cursors";
         };
         sessionVariables = {
-            EDITOR = "hx";
+            EDITOR = "nvim";
             XCURSOR_THEME = "Vimix-cursors";
         };
         shellAliases = {
