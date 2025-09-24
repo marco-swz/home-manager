@@ -77,7 +77,7 @@
             nextcloud-client
             wezterm
             devenv
-            wezterm
+            super-productivity
         ];
     };
 
