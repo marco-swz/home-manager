@@ -78,6 +78,7 @@
             wezterm
             devenv
             super-productivity
+            jujutsu
         ];
     };
 
