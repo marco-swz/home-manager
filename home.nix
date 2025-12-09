@@ -70,7 +70,7 @@
             lazygit
             pyright
             rust-analyzer
-            vistafonts
+            vista-fonts
             zellij
             spotify
             helix
