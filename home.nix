@@ -77,8 +77,7 @@
             nextcloud-client
             wezterm
             devenv
-            super-productivity
-            jujutsu
+            prismlauncher
         ];
     };
 
