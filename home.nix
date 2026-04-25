@@ -43,6 +43,7 @@
             age
             alacritty    
             neovim
+            tree-sitter
             fd
             ripgrep
             fzf
