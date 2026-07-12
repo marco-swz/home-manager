@@ -31,6 +31,7 @@
             usb = "udiskie";
         };  
         pointerCursor = {
+            enable = true;
             gtk.enable = true;
             x11.enable = true;
             name = "Vimix-cursors";
@@ -57,7 +58,7 @@
             python312Packages.pip
             cargo
             go
-            nodejs_20
+            nodejs_latest
             obsidian
             nixd
             clang-tools
@@ -115,7 +116,7 @@
         };
     };
 
-    gtk = {
+    gtk.gtk4 = {
         enable = true;
 
         cursorTheme.package = pkgs.vimix-cursors;
@@ -127,6 +128,6 @@
 
     qt = {
         enable = true;
-        platformTheme.name = "gtk";
+        platformTheme.name = "gtk4";
     };
 }
